@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul,li{
+    list-style: none;
+}
+
+.checklist{
+    width:190px;
+    border:2px solid #f40;
+    margin: 100px auto;
+    padding: 10px;
+}
+
+.check_list li{
+    font:normal 13px/26px '微软雅黑';
+    overflow: hidden;
+}
+
+ul li label input{
+    margin-top: 6px;
+    float: left;
+}
+
+ul li label span{
+    margin-left: 10px;
+    float: left;
+}
+
+button{
+    width:60px;
+    padding: 4px;
+    border: none;
+    background: #f40;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
