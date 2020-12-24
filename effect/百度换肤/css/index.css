@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul,li,ol{
+    list-style: none;
+}
+
+img{
+    display: block;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+/* 按钮 */
+.open_skill{
+    display: block;
+    margin: 0px auto;
+    width: 200px;
+}
+.open_skill img{
+    width: 100%;
+}
+
+
+/* 皮肤 */
+
+.sikls{
+    width: 900px;
+    padding: 20px;
+    overflow: hidden;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin: -50px 0 0 -450px;
+    display: none;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #333;
+}
+
+.sikl{
+    width: 590px;
+    float: left;
+    height: 180px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.sikl li{
+    width: 97px;
+    height: 59px;
+    float: left;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sikl li:nth-of-type(10),
+.sikl li:nth-of-type(11),
+.sikl li:nth-of-type(12){
+    position: absolute;
+    bottom: 2px;
+}
+
+.sikl li:nth-of-type(11){
+    left: 98px;
+}
+.sikl li:nth-of-type(12){
+    left: 195px;
+}
+
+.sikl li img{
+    width: 100%;
+    padding: .5px;
+}
+
+.sikl li.special{
+    width: 195px;
+    height: 119px;
+}
+
+/* 预览 */
+.preview{
+    float: right;
+    width: 300px;
+    height: 175px;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+/* 关闭 */
+.close_btn{
+    position: absolute;
+    top:2px;
+    right: 5px;
+    cursor: pointer;
+    color: #999;
+}
+
