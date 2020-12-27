@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* 外包裹 */
+.wrap{
+    width:300px;
+    height: 500px;
+    background: #222;
+    margin: 100px auto;
+}
+
+/* 结果区 */
+.result{
+    height: 100px;
+    text-align: right;
+    line-height: 150px;
+    font-size: 30px;
+    color: #fff;
+    padding-right: 20px;
+}
+
+/* 按键区 */
+.key p{
+    width:50px;
+    height: 50px;
+    border-radius:100%;
+    color: #fff;
+    text-align: center;
+    line-height: 50px; 
+    float: left;
+    margin: 12px;
+    cursor: pointer;
+    background: #333;
+    
+}
+
+.key .oper-key,.key .equal-key{
+    background: rgb(218, 142, 56);
+}
+
+.key .fun-key{
+    background: rgb(194, 193, 193);
+}
+
+.key p:hover{
+    background: rgb(78, 78, 78);
+}
+
+.key .oper-key:hover{
+    background: rgb(226, 172, 111);
+}
+
+.key .fun-key:hover{
+    background: rgb(129, 129, 129);
+}
+
