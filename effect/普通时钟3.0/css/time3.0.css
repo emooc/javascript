@@ -1,0 +1,12 @@
+* {
+    margin : 0px;
+    padding: 0px;
+}
+
+.time {
+    margin-top: 100px;
+    color     : #333;
+    display   : block;
+    text-align: center;
+    font      : bold normal 30px/1.5 '微软雅黑';
+}
