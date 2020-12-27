@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.clock{
+    margin: 100px auto;
+    width: 400px;
+    height: 400px;
+    background: url("../imgs/clock.png") no-repeat;
+    background-size: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.h,.m,.s{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.h{
+    background: url("../imgs/时针.png") no-repeat 50.3% 25%;
+    transform: rotate(45deg);
+}
+
+.m{
+    background: url("../imgs/分针.png") no-repeat 50.3% 16%;
+}
+.s{
+    background: url("../imgs/秒针.png") no-repeat 50.3% 16%;
+} 
