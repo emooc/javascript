@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字时钟</title>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- 外包裹 -->
+    <div class="wrap">
+        <!-- 居中区域 -->
+        <div class="center">
+            <!-- 定时闹钟 -->
+            <div class="clock">
+                <span class="fa fa-calendar"></span>
+                <span class="fa fa-clock-o"></span>
+            </div>
+            <!-- 时分秒区 -->
+            <div class="sfm">
+                <!-- 时针区域 -->
+                <div class="hourHand led">
+                    <div class="hh1 zone">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="hh2 zone">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- 闪烁符 -->
+                <span class="twinkle">:</span>
+                <!-- 分针区域 -->
+                <div class="minuteHand led">
+                    <div class="mh1 zone">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mh2 zone">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- 上下午区 -->
+            <div class="ampm">
+                <span class="fa fa-sun-o"></span>
+                <span class="fa fa-star-o"></span>
+            </div>
+        </div>
+        
+    </div>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</body>
+</html>

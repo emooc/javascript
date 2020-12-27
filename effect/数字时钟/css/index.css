@@ -1,0 +1,288 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+}
+/* 外包裹 */
+.wrap{
+    width: 600px;
+    height: 300px;
+    background: #000;
+    border-radius: 20px;
+    margin: 100px auto;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+/* 居中区域 */
+.center{
+    margin: -15% 0 0 -34%;
+    position: absolute;
+    width: 70%;
+    height: 60%;
+    top:50%;
+    left:50%;
+    border-radius: 10px;
+}
+
+.clock,.ampm{
+    display: block;
+    width: 6%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.clock,.sfm,.ampm{
+    float: left;
+}
+
+.clock span{
+    display: none;
+}
+.ampm span{
+    display: none;
+}
+
+
+.sfm{
+    width: 88%;
+    height: 100%;
+}
+
+.sfm .led {
+    width: 45%;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* 闪烁符 */
+.twinkle{
+    width: 10%;
+    height: 100%;
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+    line-height: 250%;
+}
+
+.led .zone{
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+/* 定时闹钟 上午下午 */
+.clock span:nth-of-type(1),
+.ampm span:nth-of-type(1){
+    position: absolute;
+    top: 0%;
+    left: 2%;
+}
+
+.clock span:nth-of-type(2),
+.ampm span:nth-of-type(2){
+    position: absolute;
+    bottom: 0%;
+    left: 2%;
+}
+
+
+.zone span{
+    display: block;
+    width: 9%;
+    background: #fff;
+    margin: 5px;
+    position: absolute;
+}
+
+.zone span:nth-of-type(1),
+.zone span:nth-of-type(2),
+.zone span:nth-of-type(3),
+.zone span:nth-of-type(4){
+    height: 40%;
+}
+
+.zone span:nth-of-type(1),
+.zone span:nth-of-type(2){
+    right: 3%;
+}
+
+.zone span:nth-of-type(3),
+.zone span:nth-of-type(4){
+    left: 3%;
+}
+
+
+.zone span:nth-of-type(1),
+.zone span:nth-of-type(3){
+    top: 5%;
+}
+.zone span:nth-of-type(2),
+.zone span:nth-of-type(4){
+    bottom: 5%;
+}
+
+.zone span::before,
+.zone span::after{
+    position: absolute;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: .25rem;
+}
+
+.zone span::before{
+    left: 0%;
+    top: -11%;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #fff transparent;
+}
+
+
+.zone span::after{
+    left: 0%;
+    bottom:-11%;
+    border-style: solid dashed dashed dashed;
+    border-color: #fff transparent transparent transparent;
+}
+
+
+
+/* 567 LED针 */
+
+.zone span:nth-of-type(5),
+.zone span:nth-of-type(6),
+.zone span:nth-of-type(7){
+    left: 40%;
+    height: 27%;
+    transform: rotate(90deg);
+}
+
+.zone span:nth-of-type(5){
+    top: -11%;
+}
+.zone span:nth-of-type(6){
+    top: 33.5%;
+}
+.zone span:nth-of-type(7){
+    bottom: -11%;
+}
+
+.zone span:nth-of-type(5)::after,
+.zone span:nth-of-type(6)::after,
+.zone span:nth-of-type(7)::after{
+    position: absolute;
+    top: 100%;
+}
+
+.zone span:nth-of-type(5)::before,
+.zone span:nth-of-type(6)::before,
+.zone span:nth-of-type(7)::before{
+    position: absolute;
+    top: -16%;
+}
+
+
+/* 闪烁符动画 */
+.twinkle{
+    position: relative;
+    animation: anTwinkle 1s linear infinite;
+}
+
+@keyframes anTwinkle{
+    0%   {color: #fff;}
+    50% {color: #000;}
+    100%   {color: #fff;}
+}
+
+
+/* 定义LED数字 */
+
+.led_num0 span:nth-of-type(1){display: block}
+.led_num0 span:nth-of-type(2){display: block}
+.led_num0 span:nth-of-type(3){display: block}
+.led_num0 span:nth-of-type(4){display: block}
+.led_num0 span:nth-of-type(5){display: block}
+.led_num0 span:nth-of-type(6){display: none}
+.led_num0 span:nth-of-type(7){display: block}
+
+.led_num1 span:nth-of-type(1){display: block}
+.led_num1 span:nth-of-type(2){display: block}
+.led_num1 span:nth-of-type(3){display: none}
+.led_num1 span:nth-of-type(4){display: none}
+.led_num1 span:nth-of-type(5){display: none}
+.led_num1 span:nth-of-type(6){display: none}
+.led_num1 span:nth-of-type(7){display: none}
+
+.led_num2 span:nth-of-type(1){display: block}
+.led_num2 span:nth-of-type(2){display: none}
+.led_num2 span:nth-of-type(3){display: none}
+.led_num2 span:nth-of-type(4){display: block}
+.led_num2 span:nth-of-type(5){display: block}
+.led_num2 span:nth-of-type(6){display: block}
+.led_num2 span:nth-of-type(7){display: block}
+
+.led_num3 span:nth-of-type(1){display: block}
+.led_num3 span:nth-of-type(2){display: block}
+.led_num3 span:nth-of-type(3){display: none}
+.led_num3 span:nth-of-type(4){display: none}
+.led_num3 span:nth-of-type(5){display: block}
+.led_num3 span:nth-of-type(6){display: block}
+.led_num3 span:nth-of-type(7){display: block}
+
+.led_num4 span:nth-of-type(1){display: block}
+.led_num4 span:nth-of-type(2){display: block}
+.led_num4 span:nth-of-type(3){display: block}
+.led_num4 span:nth-of-type(4){display: none}
+.led_num4 span:nth-of-type(5){display: none}
+.led_num4 span:nth-of-type(6){display: block}
+.led_num4 span:nth-of-type(7){display: none}
+
+.led_num5 span:nth-of-type(1){display: none}
+.led_num5 span:nth-of-type(2){display: block}
+.led_num5 span:nth-of-type(3){display: block}
+.led_num5 span:nth-of-type(4){display: none}
+.led_num5 span:nth-of-type(5){display: block}
+.led_num5 span:nth-of-type(6){display: block}
+.led_num5 span:nth-of-type(7){display: block}
+
+.led_num6 span:nth-of-type(1){display: none}
+.led_num6 span:nth-of-type(2){display: block}
+.led_num6 span:nth-of-type(3){display: block}
+.led_num6 span:nth-of-type(4){display: block}
+.led_num6 span:nth-of-type(5){display: block}
+.led_num6 span:nth-of-type(6){display: block}
+.led_num6 span:nth-of-type(7){display: block}
+
+.led_num7 span:nth-of-type(1){display: block}
+.led_num7 span:nth-of-type(2){display: block}
+.led_num7 span:nth-of-type(3){display: none}
+.led_num7 span:nth-of-type(4){display: none}
+.led_num7 span:nth-of-type(5){display: block}
+.led_num7 span:nth-of-type(6){display: none}
+.led_num7 span:nth-of-type(7){display: none}
+
+.led_num8 span:nth-of-type(1){display: block}
+.led_num8 span:nth-of-type(2){display: block}
+.led_num8 span:nth-of-type(3){display: block}
+.led_num8 span:nth-of-type(4){display: block}
+.led_num8 span:nth-of-type(5){display: block}
+.led_num8 span:nth-of-type(6){display: block}
+.led_num8 span:nth-of-type(7){display: block}
+
+.led_num9 span:nth-of-type(1){display: block}
+.led_num9 span:nth-of-type(2){display: block}
+.led_num9 span:nth-of-type(3){display: block}
+.led_num9 span:nth-of-type(4){display: none}
+.led_num9 span:nth-of-type(5){display: block}
+.led_num9 span:nth-of-type(6){display: block}
+.led_num9 span:nth-of-type(7){display: block}
+
+
+
